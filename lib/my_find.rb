@@ -5,10 +5,10 @@ def my_find(collection)
   new_collection = Array.new
   while i < collection.length
     if yield(collection[i]) == true
-    new_collection << yield(collection[i])
+      collection[i]
+    else
+      nil
     end
     i += 1
   end
-
-  new_collection
 end
