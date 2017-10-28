@@ -5,8 +5,7 @@ def my_find(collection)
   new_collection = Array.new
   while i < collection.length
     if yield(collection[i]) == true
-      collection[i]
-      break
+      return collection[i]
     else
       nil
     end
